@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam 3</title>
+    <script>
+        var a; /* Khai báo biến a*/
+        var b; /* Khai báo biến b*/
+        var x; /* Khai báo biến x*/
+
+        a = window.prompt("Please a", 100); /* Tạo một bảng table để người dùng nhập*/
+        a = window.parseFloat(a); /* Phân tích chuỗi được cung cấp và trả về một giá trị số  */
+
+        b = window.prompt("Please b", 100); /* Tạo một bảng table để người dùng nhập*/
+        b = window.parseFloat(b); /* Phân tích chuỗi được cung cấp và trả về một giá trị số  */
+
+        if (a == 0) /* Xét điều kiện a = 0 thì phương trình không có nghiệm*/ {
+            alert("Không có nghiệm"); /* Hiển thị thông báo cho người dùng*/
+        } else {
+            if (b == 0) /* Xét điều kiện b = 0 thì phương trình có vô số nghiệm*/ {
+                alert("Vô số nghiệm"); /* Hiển thị thông báo cho người dùng*/
+            } else {
+                x = (-b) / a; /*Thực hiện phép tính ax + b = 0*/
+                window.alert("x: " + x); /* Hiển thị kết quả tính được của x*/
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

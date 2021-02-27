@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam 2</title>
+    <script>
+        var math; /* Khai báo biến Math*/
+        var physics; /* Khai báo biến physic*/
+        var chemistry; /* Khai báo biến chemistry */
+        var avg;
+
+        math = window.prompt(" Please scores Math", 10); /* Tạo một bảng table để người dùng nhập*/
+        math = window.parseInt(math); /* Phân tích chuỗi và trả về một số nguyên  */
+
+        physics = window.prompt(" Please scores physics", 10); /* Tạo một bảng table để người dùng nhập*/
+        physics = window.parseInt(physics); /* Phân tích chuỗi và trả về một số nguyên  */
+
+        chemistry = window.prompt(" Please scores chemistry", 10); /* Tạo một bảng table để người dùng nhập*/
+        chemistry = window.parseInt(chemistry); /* Phân tích chuỗi và trả về một số nguyên  */
+
+        if (isNaN(math) || math < 0 || math > 10 || isNaN(physics) || physics < 0 || physics > 10 || isNaN(chemistry) || chemistry < 0 || chemistry > 10) /*Đặt điều kiện khi nhập giá trị*/ {
+            alert(
+                "Pleas enter scores a number"); /* Hiện bảng thông báo yêu cầu nhập lại cho người dùng*/
+        } else {
+            avg = (math + physics + chemistry) / 3; /* Hàm thực hiện phép tính*/
+            window.alert("Medium Score: " + avg); /* Hiện bảng thông báo kết quả đã tính cho người dùng*/
+        }
+
+        if (avg >= 8) /* Xét điều kiện nếu điểm trung bình lớn hơn hoặc bằng 8 thì xếp loại A*/ {
+            alert("Rank A");
+        } else if (avg >= 6.5) /* Xét điều kiện nếu điểm trung bình lớn hơn hoặc bằng 6.5 thì xếp loại B*/ {
+            alert("Rank B");
+        } else if (avg >= 5) /* Xét điều kiện nếu điểm trung bình lớn hơn hoặc bằng 5 thì xếp loại C*/ {
+            alert("Rank C");
+        } else /* Nếu không thõa mãn các điều kiện trên thì xếp loại D*/ {
+            alert("Rank D");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

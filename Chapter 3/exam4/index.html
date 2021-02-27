@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam 4</title>
+    <script>
+        var a; /* Khai báo biến a*/
+        var b; /* Khai báo biến b*/
+        var c; /* Khai báo biến c*/
+        var x1; /* Khai báo biến x1*/
+        var x2; /* Khai báo biến x2*/
+        var result; /* Khai báo kết quả*/
+
+        a = window.prompt("Please a", 100); /* Tạo một bảng table để người dùng nhập*/
+        a = window.parseFloat(a); /* Phân tích chuỗi được cung cấp và trả về một giá trị số  */
+
+        b = window.prompt("Please b", 100); /* Tạo một bảng table để người dùng nhập*/
+        b = window.parseFloat(b); /* Phân tích chuỗi được cung cấp và trả về một giá trị số  */
+
+        c = window.prompt("Please c", 100); /* Tạo một bảng table để người dùng nhập*/
+        c = window.parseFloat(c); /* Phân tích chuỗi được cung cấp và trả về một giá trị số  */
+
+        if (isNaN(a) || a < 0 || isNaN(b) || b < 0 || isNaN(c) || c < 0) /*Kiểm tra điều kiện trước khi thực hiện phép tính*/ {
+            alert("Pleas enter a number") /* Hiện bảng thông báo kết quả đã tính cho người dùng*/
+        } else {
+            result = b * b - 4 * a * c; /* Hàm thực hiện phép tính*/
+            window.alert("Medium Score: " + result); /* Hiện bảng thông báo kết quả đã tính cho người dùng*/
+        }
+
+        if (result < 0) /* Xét điều kiện*/ {
+            alert("Phương trình không có nghiệm") /* Hiện thị thông báo cho người dùng*/
+        } else if (result == 0) /* Xét điều kiện*/ {
+            x1 = (-b) / (2 * a); /* Thực hiện phép tính*/
+            alert("Phương trình có nghiệm kép" + x1) /* Hiện thị thông báo cho người dùng*/ ;
+        } else {
+            x1 = ((-b + result) / (2 * a)); /* Thực hiện phép tính*/
+            x2 = ((-b - result) / (2 * a)); /* Thực hiện phép tính*/
+            alert("Phương trình có 2 nghiệm " + "x1 :" + x1 + "x2 :" + x2) /* Hiện thị thông báo cho người dùng*/ ;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
