@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a; /* Khai báo biến a */
+        var b; /* Khai báo biến b */
+        var greatestCommonDivisor = function(a, b) /* Định nghĩa hàm và khai báo biến function để tìm ước chung lớn nhất*/ {
+            while (a != b) /* Nếu a khác b thì xảy ra 2 điều kiện*/ {
+                if (a > b) /* Nếu a lớn hơn b thì*/ {
+                    a = a - b /* a sẽ bằng a trừ b*/ ;
+                } else /* Hoặc ngược lại*/ {
+                    b = b - a /* b sẽ bằng b trừ a*/ ;
+                }
+            }
+            return a;
+        };
+
+        a = window.prompt("Enter a:");
+        a = window.parseInt(a);
+
+        b = window.prompt("Enter b:");
+        b = window.parseInt(b);
+
+        if (isNaN(a) || a < 0 || isNaN(b) || b < 0) {
+            alert("Please enter a number");
+        } else {
+            var result = greatestCommonDivisor(a, b);
+            var stringToDisplay =
+                "Greatest common divisor of:<br>" + "a = " + a + "<br>" + "b = " + b + "<br>" + "Result = " + result + "<br>";
+        }
+        document.write(stringToDisplay);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

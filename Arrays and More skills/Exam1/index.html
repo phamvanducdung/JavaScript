@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*1.Create an integer array with 10 elements and the fill the data for this array - Tạo một mảng số nguyên có 10 phần tử và nhập giá trị cho mảng này*/
+
+        var integerArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        /*2.Write a function to print all member of array to screen - Viết một hàm để hiển thị các giá trị của mảng lên màn hình*/
+        var printArray = function(arrayName) {
+            document.write(arrayName.join(","));
+        }
+
+        /*3.Write a function to permit user enter a value and find this is exits in array or not - Viết một hàm cho phép người dùng nhập một giá trị và xem đây có phải là lối thoát trong mảng hay không*/
+        var searchMember = function(arrayName) {
+            var member = parseInt(prompt("Enter a member:"));
+            var isMember = arrayName.includes(member);
+            if (isMember == true) {
+                alert("Yes");
+            } else {
+                alert("No");
+            }
+        }
+
+        /*4.Write a function to find the maximum value in this array - Viết một hàm để tìm giá trị lớn nhất trong mảng*/
+        var maximumArray = function(arrayName) {
+            var max = -Infinity;
+            for (var i in arrayName) {
+                if (arrayName[i] > max) {
+                    max = arrayName[i];
+                }
+            }
+            document.write("Maximu value" + max);
+        }
+
+        /*5.Write a function to calculate sum of all elements of array - Viết một hàm tính tổng tất cả các phần tử của mảng*/
+        var sumArray = function(arrayName) {
+            var sum = integerArray.reduce(function(a, b) {
+                return a + b;
+            });
+            document.write(sum);
+        }
+
+        /*6.Write a function to sort all elements of array by descending - Viết một hàm sắp xếp các phần tử theo chiều giảm dần*/
+        var sortArray = function(arrayName) {
+            arrayName.sort(function(a, b) {
+                return b - a;
+            });
+            printArray(arrayName);
+        }
+
+        /*7.Setup a menu to permit user enter a number to select to run a function. Example: 1 – Print Array, 2- Search a member, 3- Find Maximum Number - Thiết lập một menu cho phép người dùng nhập một số để chọn để chạy một chức năng. Ví dụ: 1 - In mảng, 2- Tìm kiếm thành viên, 3- Tìm số tối đa…*/
+        var programArray = function(arr) {
+            var index = parseInt(prompt("Enter number :  1–Print Array   2-Search a member   3-Find Maximum Number   4-Sort array by descending  5-Sum array"));
+            switch (index) {
+                case 1:
+                    printArray(arr);
+                    break;
+                case 2:
+                    searchMember(arr);
+                    break;
+                case 3:
+                    maximumArray(arr);
+                    break;
+                case 4:
+                    sortArray(arr);
+                    break;
+                case 5:
+                    sumArray(arr);
+                    break;
+            }
+        }
+        window.onload = programArray(integerArray);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
